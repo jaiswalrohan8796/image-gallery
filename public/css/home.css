@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+.gallery .header {
+    background-color: #4c0661;
+    color: white;
+    height: 70px;
+}
+.gallery .header p {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.gallery {
+    /* background-color: rgb(175, 235, 175); */
+    padding: 0;
+    /* height: 100vh; */
+    /* overflow-y:scroll; */
+}
+
+.form {
+    background-color: #73f8db;
+    padding: 0;
+    position: fixed;
+    height: 360px;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 24px;
+}
+#uploadForm {
+    display: none;
+}
+form .field {
+    margin: 1rem 0;
+}
+
+#upBtn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1.6rem;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#upBtn:hover {
+    animation-name: pop;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+}
+
+.posts-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.posts-wrapper .card {
+    height: 500px;
+    margin: 0.8rem;
+    border: none;
+    background: #ffffff;
+    box-shadow: 18px 18px 36px #b0b0b0, -18px -18px 36px #ffffff;
+}
+.card .card-title {
+    height: 32px;
+    overflow: hidden;
+}
+.card .card-text {
+    height: 98px;
+    padding-right: 28px;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.card .card-actions {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dropdown-menu {
+    min-width: 0;
+    width: 32px;
+    margin: 1px;
+    position: absolute;
+    inset: auto auto 4px -5px;
+    transform: translate(0px, -39.6px);
+    border: none;
+    background: transparent;
+}
+.dropdown-menu li {
+    margin: 8px 0;
+}
+
+g#share-icon:hover path {
+    fill: #000;
+}
+g#edit-icon:hover path,
+g#edit-icon:hover polygon {
+    fill: #000;
+}
+g#delete-icon:hover path {
+    fill: #000;
+}
+g#more-icon:hover path {
+    fill: #000;
+}
+
+/* media-queries  */
+@media (max-width: 576px) {
+    /* .gallery {
+        height: 60vh;
+    } */
+    .gallery .header {
+        height: 60px;
+    }
+    .gallery .header p {
+        padding-top: 4px;
+        font-size: 2rem;
+    }
+    .form {
+        height: 280px;
+        width: 90vw;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    form .field {
+        margin: 0;
+    }
+    #upBtn {
+        right: 1rem;
+    }
+}
+
+/* keyframes  */
+@keyframes pop {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
