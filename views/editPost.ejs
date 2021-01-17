@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Memory Book</title>
+    <!-- Styles  -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/editPost.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="gallery col-12">
+            <div class="header">
+                <p class=" text-center">Memory Book</p>
+            </div>
+            <div>
+                <h5 id="message" class="text-center mt-4">
+                    <%= message %>
+                </h5>
+            </div>
+
+        </div>
+    </div>
+
+    <div id='uploadForm' class="form my-1 px-1 pb-4">
+        <form action="/edit" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row field  pt-1 g-4 align-items-center">
+                        <div class="col-auto">
+                            <input type="hidden" name="id" value="<%= post._id %>">
+                            <label for="title" class="col-form-label">Title</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" id="title" class="form-control" name="title" value="<%= post.title %>">
+                        </div>
+                    </div>
+                    <div class="row field pt-1 g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="desc" class="col-form-label">Desc</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" id="desc" class="form-control" name="desc" value="<%= post.desc %>">
+                        </div>
+                    </div>
+                    <div class="row field pt-1 g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="time" class="col-form-label">Date</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="date" id="time" class="form-control" name="time" value="<%= post.time %>">
+                        </div>
+                    </div>
+                    <div class="row field pt-1 g-1 align-items-center">
+                        <div class="col-auto">
+                            <label for="image" class="col-form-label">Image</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="file" id="image" class="form-control" name="image">
+                        </div>
+                    </div>
+                    <div class="row field pt-1 g-1 align-items-center">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

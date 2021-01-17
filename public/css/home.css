@@ -89,28 +89,32 @@ form .field {
     justify-content: space-between;
 }
 .dropdown-menu {
-    min-width: 0;
-    width: 32px;
+    min-width: 0px;
+    width: 88px;
     margin: 1px;
+    padding: 0;
     position: absolute;
     inset: auto auto 4px -5px;
-    transform: translate(0px, -39.6px);
-    border: none;
-    background: transparent;
+    transform: translate(-32px, -33px) !important;
+    border: 1px solid rgb(226, 225, 225);
+    background: #fff;
 }
 .dropdown-menu li {
-    margin: 8px 0;
+    height: 40px;
+    padding: 8px;
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
 }
 
-g#share-icon:hover path {
-    fill: #000;
+.dropdown-menu li:hover,
+.dropdown-menu li:active,
+.dropdown-menu li:visited {
+    background-color: #efecf1;
 }
-g#edit-icon:hover path,
-g#edit-icon:hover polygon {
-    fill: #000;
-}
-g#delete-icon:hover path {
-    fill: #000;
+
+#more-btn:hover {
+    cursor: pointer;
 }
 g#more-icon:hover path {
     fill: #000;

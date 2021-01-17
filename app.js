@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 const mongodbURI = require("./config.js");
-const router = require("./routes/route.js");
+const routes = require("./routes/route.js");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -23,4 +23,4 @@ mongoose
     })
     .catch((err) => console.error(err.message));
 
-app.use(router);
+app.use(routes);

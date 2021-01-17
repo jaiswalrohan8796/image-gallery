@@ -27,5 +27,7 @@ const fileUpload = multer({
 
 router.get("/", allRoutes.getHome);
 router.post("/upload", fileUpload.single("image"), allRoutes.postPost);
-
+router.delete("/delete/:id", allRoutes.deletePost);
+router.post("/edit", fileUpload.single("image"), allRoutes.editPostSave);
+router.get("/edit/:id", allRoutes.editPost);
 module.exports = router;
